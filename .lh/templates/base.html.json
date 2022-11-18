@@ -1,0 +1,22 @@
+{
+    "sourceFile": "templates/base.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1668767000102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668767123242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,5 @@\n     <a href='{% url 'home' %}'>Home</a> |\n     <a href='{% url 'about' %}'>About</a>\n </header>\n \n-{% {% block content %}{% endblock content  %}%}\n\\ No newline at end of file\n+{% block content %}{% endblock content  %}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1668767000102,
+            "name": "Commit-0",
+            "content": "<header>\n    <a href='{% url 'home' %}'>Home</a> |\n    <a href='{% url 'about' %}'>About</a>\n</header>\n\n{% {% block content %}{% endblock content  %}%}"
+        }
+    ]
+}

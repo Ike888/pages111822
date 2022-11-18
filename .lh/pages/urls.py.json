@@ -1,0 +1,30 @@
+{
+    "sourceFile": "pages/urls.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1668733091976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668736065512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n from django.urls import path\n-from .views import HomePageView\n+from .views import HomePageView, AboutPageView\n \n urlpatterns = [\n     path('', HomePageView.as_view(), name='home'),\n+    path('about/', AboutPageView.as_vew(), name='about'),\n ]\n"
+                },
+                {
+                    "date": 1668736089334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n from .views import HomePageView, AboutPageView\n \n urlpatterns = [\n     path('', HomePageView.as_view(), name='home'),\n-    path('about/', AboutPageView.as_vew(), name='about'),\n+    path('about/', AboutPageView.as_view(), name='about'),\n ]\n"
+                },
+                {
+                    "date": 1668786785649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n from django.urls import path\n from .views import HomePageView, AboutPageView\n \n+\n urlpatterns = [\n     path('', HomePageView.as_view(), name='home'),\n     path('about/', AboutPageView.as_view(), name='about'),\n ]\n"
+                }
+            ],
+            "date": 1668733091976,
+            "name": "Commit-0",
+            "content": "from django.urls import path\nfrom .views import HomePageView\n\nurlpatterns = [\n    path('', HomePageView.as_view(), name='home'),\n]\n"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "pages/tests.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1668786097508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668786358204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n         \n \n class AboutpageTest(SimpleTestCase):\n     def test_url_exits_at_correct_location(self):\n-        response = self.client.get('/about')\n+        response = self.client.get('/about/')\n         self.assertEqual(response.status_code, 200)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668786785649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,22 @@\n from django.test import TestCase\n from django.test import SimpleTestCase\n+from django.urls import reverse\n \n # Create your tests here.\n class HomePageTest(SimpleTestCase):\n     def test_url_exits_at_correct_location(self):\n         response = self.client.get('/')\n         self.assertEqual(response.status_code, 200)\n         \n+    def test_url_available_by_name(self):\n+        response = self.client.get(reverse('home'))\n+        self.assertEqual(response.status_code, 200)\n \n class AboutpageTest(SimpleTestCase):\n     def test_url_exits_at_correct_location(self):\n         response = self.client.get('/about/')\n+        self.assertEqual(response.status_code, 200)\n+        \n+    def test_url_available_by_name(self):\n+        response = self.client.get(reverse('about'))\n         self.assertEqual(response.status_code, 200)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668789106785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,30 @@\n         \n     def test_url_available_by_name(self):\n         response = self.client.get(reverse('home'))\n         self.assertEqual(response.status_code, 200)\n+        \n+    def test_template_name_correct(self):\n+        response = self.client.get(reverse('home'))\n+        self.assertTemplateUsed(response, 'home.html')\n+        \n+    def test_template_content(self):\n+        response = self.client.get(reverse, 'home')\n+        self.assertContains(response, '<h1>Homepage</h1>')\n \n\\ No newline at end of file\n+        \n class AboutpageTest(SimpleTestCase):\n     def test_url_exits_at_correct_location(self):\n         response = self.client.get('/about/')\n         self.assertEqual(response.status_code, 200)\n         \n     def test_url_available_by_name(self):\n         response = self.client.get(reverse('about'))\n-        self.assertEqual(response.status_code, 200)\n+        self.assertEqual(response.status_code, 200)\n+        \n+    def test_template_name_correct(self):\n+        response = self.client.get(reverse,('about'))\n+        self.assertTemplateUsed(response, 'about.html')\n+        \n+    def test_template_contect(self):\n+        response = self.client.get(reverse('about'))\n+        self.assertContains(response, '<h1>About page</h1>')\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1668786097508,
+            "name": "Commit-0",
+            "content": "from django.test import TestCase\nfrom django.test import SimpleTestCase\n\n# Create your tests here.\nclass HomePageTest(SimpleTestCase):\n    def test_url_exits_at_correct_location(self):\n        response = self.client.get('/')\n        self.assertEqual(response.status_code, 200)\n        \n\nclass AboutpageTest(SimpleTestCase):\n    def test_url_exits_at_correct_location(self):\n        response = self.client.get('/about')\n        self.assertEqual(response.status_code, 200)"
+        }
+    ]
+}

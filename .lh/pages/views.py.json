@@ -1,0 +1,26 @@
+{
+    "sourceFile": "pages/views.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1668733091975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668733393394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,5 @@\n from django.views.generic import TemplateView\n \n # Create your views here.\n class HomePageView(TemplateView):\n-    template_name: 'home.html'\n\\ No newline at end of file\n+    template_name = 'home.html'\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668736065512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,8 @@\n from django.views.generic import TemplateView\n \n # Create your views here.\n class HomePageView(TemplateView):\n-    template_name = 'home.html'\n\\ No newline at end of file\n+    template_name = 'home.html'\n+    \n+class AboutPageView(TemplateView):\n+    template_name = 'about.html'\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1668733091975,
+            "name": "Commit-0",
+            "content": "from django.shortcuts import render\nfrom django.views.generic import TemplateView\n\n# Create your views here.\nclass HomePageView(TemplateView):\n    template_name: 'home.html'"
+        }
+    ]
+}
