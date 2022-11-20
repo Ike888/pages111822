@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1668733091976,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668972912174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \n # SECURITY WARNING: don't run with debug turned on in production!\n DEBUG = True\n \n-ALLOWED_HOSTS = []\n+ALLOWED_HOSTS = ['*']\n \n \n # Application definition\n \n"
                 }
             ],
             "date": 1668733091976,
